@@ -14,7 +14,7 @@ def printf(str):
     print str
 
 #Brower setup
-chromeDriverPath = 'C:/Trend/0_testscript/webdriver/chromedriver_2.14.exe'
+chromeDriverPath = './webdriver/chromedriver_2.14.exe'
 driver = webdriver.Chrome(executable_path=chromeDriverPath)
 driver.implicitly_wait(30)
 driver.maximize_window()
