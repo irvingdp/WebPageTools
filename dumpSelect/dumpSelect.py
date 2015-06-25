@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC # available since 2.26.0
 
 #init log file
-logFile = open('./en_nabu_product_list_dump.txt', 'w')
+logFile = open('./en_nabu_product_list_dump_prod.txt', 'w')
 
 def printf(str):
     logFile.write(str)
@@ -14,13 +14,13 @@ def printf(str):
     print str
 
 #Brower setup
-chromeDriverPath = './webdriver/chromedriver_2.14.exe'
+chromeDriverPath = '../webdriver/chromedriver_2.14.exe'
 driver = webdriver.Chrome(executable_path=chromeDriverPath)
 driver.implicitly_wait(30)
 driver.maximize_window()
 
 #Test case here
-nabuSRF_URL = 'https://stgesupport.trendmicro.com/srf/srfnabu.aspx?locale=en'
+nabuSRF_URL = ''
 driver.get(nabuSRF_URL)
 driver.find_element_by_css_selector("option.productIssue").click()
 driver.find_element_by_id("textareaDescription").clear()
